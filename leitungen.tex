@@ -33,6 +33,10 @@ Die Spannung lässt sich als Überlagerung einer hin- und zurücklaufenden Welle
     \boxed{ \UU(z)=\UU_h(z)+\UU_r(z) = \UUh e^{-\ugamma z}+\UU_{r0} e^{\ugamma}z }
 \label{eqn:u-uberlagerung}
 \end{equation}
+\begin{equation}
+    \boxed{ \II(z)=\frac{1}{Z_0} \left( \UU_h(z)-\UU_r(z)\right) = \frac{1}{Z_0} \left( \UUh e^{-\ugamma z}-\UU_{r0} e^{\ugamma}z \right) }
+\label{eqn:i-uberlagerung}
+\end{equation}
 
 $\implies$ Der \emph{Ausbreitungskoeffizient $\gamma$} enthält alle Leitungsparameter.
 Bei verlustloser Leitung besteht dies nur aus dem \emph{Phasenkoeffizient $\beta$}, da dann der \emph{Dämpfungskoeffizient $\alpha$} $= 0$ ist.
@@ -103,6 +107,15 @@ Nützlich ist die Spannung als Funktion des Reflexionsfaktors bei $z=0$.
     \end{aligned}
     \label{eqn:u-r}
 \end{equation}
+Für den Strom:
+\begin{equation}
+    \begin{aligned}
+        \II(z) &= \frac{\UU_h(z)}{Z_0}(1-\underline{r}(z))\\
+                         &= \frac{\UU_h(z)}{Z_0}\left(1-\underline{r}(0) e^{2\ugamma z}\right)
+    \end{aligned}
+    \label{eqn:i-r}
+\end{equation}
+
 Da bei der verlustlosen Leitung $\ugamma$ rein imaginär ist \eqref{eqn:gamma}, ist der Betrag von $\underline{r}$ dort unabhängig von $z$.
 
 \subsection{Sonderfälle}
@@ -116,10 +129,24 @@ Da bei der verlustlosen Leitung $\ugamma$ rein imaginär ist \eqref{eqn:gamma}, 
         Mit $U_h(z) = \UUh e^{-\ugamma z}$ \eqref{eqn:u-uberlagerung}
         und $\UU(z)=\UU_h(z)\left(1+\underline{r}(0) e^{2\ugamma z}\right)$
         \eqref{eqn:u-r} ergibt sich
-        $\UU(z) = \UUh\left( e^{-\ugamma z} + e^{\ugamma z} \right)$ ($=2 \UUh \cosh(\ugamma z)$, mit $\alpha=0 \implies \UU(z)=2 \UUh \cos(\beta )$)\\
-        $\implies$ Stehende Welle
-    \item \emph{Kurzschluss}
-    \item \emph{$Z_L$ rein imaginär}
-    \item \emph{$l = \frac{\lambda}{4}$}
-    \item \emph{$l = \frac{\lambda}{2}$}
+        $\UU(z) = \UUh\left( e^{-\ugamma z} + e^{\ugamma z} \right) =2 \UUh \cosh(\ugamma z)$\\
+        mit $\alpha=0 \implies \UU(z)=2 \UUh \cos(\beta )$\\
+        $\implies$ Stehende Welle\\
+        Strom: mit \eqref{eqn:i-r} und $\UU_h$ (siehe oben):\\
+        $\implies \II(z)=-2j\frac{\UUh}{Z_0}\sin(\beta z)$\\
+        $\ZZ(z) = \frac{\UU(z)}{\II(z)} = -Z_0\coth(\ugamma z)$\\
+        Für $l \ll \lambda$ wirkt eine offene Leitung wie eine Kapazität.
+        
+    \item \emph{Kurzschluss} ($Z_L=0$)\\
+        $r(0) = -1, s=\infty$\\
+        $\implies$ Wieder stehende Welle\\
+        Bei $l \ll \lambda$ verhält sich die kurzgeschlossene Leitung wie eine Induktivität.
+        
+    \item \emph{$l = \frac{\lambda}{4}$} $\frac{\lambda}{4}$-Transformator ($\underline{Z}_L$ beliebig)\\
+        $\underline{Z}(l=\frac{\lambda}{4})=\frac{Z_0^2}{Z_L}$\\
+        Wandelt z.B. Kurzschluss und Leerlauf ineinander um.
+
+    \item \emph{$l = \frac{\lambda}{2}$} ($\ZZ_L$ beliebig)\\
+        $\ZZ(l=\frac{\lambda}{2}) = \ZZ_L$\\
+        $\implies$ Einfügen einer Leitung mit Länge $\frac{\lambda}{2}$ hat keinen Einfluss wenn die Leitung verlustlos und die Frequenz konstant ist.
 \end{enumerate}
