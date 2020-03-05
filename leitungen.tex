@@ -73,6 +73,16 @@ Einsetzen in \eqref{eqn:u-uberlagerung} ergibt
     \UU(z) = \underbrace{ \frac{1}{2} \UU_L \left( 1 + \frac{Z_0}{\underline{Z}_L} \right) e^{-\ugamma z} }_{\text{Hinlaufend}} + \underbrace{ \frac{1}{2} \UU_L \left( 1 - \frac{Z_0}{\underline{Z}_L} \right) e^{\ugamma z} }_{\text{Rücklaufend}}
     \label{eqn:u-uberlagerung-z}
 \end{equation}
+\begin{equation}
+    \II(z) = \underbrace{ \frac{1}{2} \frac{\UU_L}{Z_0} \left( 1 + \frac{Z_0}{\underline{Z}_L} \right) e^{-\ugamma z} }_{\text{Hinlaufend}} - \underbrace{ \frac{1}{2} \frac{\UU_L}{Z_0} \left( 1 - \frac{Z_0}{\underline{Z}_L} \right) e^{\ugamma z} }_{\text{Rücklaufend}}
+    \label{eqn:i-uberlagerung-z}
+\end{equation}
+
+\noindent
+Durch Division und Identitäten für $\cosh, \sinh$ ergibt sich:
+\begin{equation}
+    \ZZ(z) = \frac{\UU(z)}{\II(z)} = Z_0 \frac{\ZZ_L-Z_0 \tanh(\ugamma z)}{Z_0 - \ZZ_L \tanh(\ugamma z)}
+\end{equation}
 
 \subsection{Reflexionsfaktor}
 Der \emph{Reflexionsfaktor $r$ an Stelle $z$} ist definiert als
