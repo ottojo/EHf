@@ -1,0 +1,38 @@
+\chapter{Streumatrix}
+
+\begin{equation}
+    \vb = \MS \cdot \va
+\end{equation}
+
+Die Streumatrix besteht aus Streuparametern und beschreibt den Zusammenhang der $N$ Ausgänge $\vb$ mit
+den $N$ Eingängen $\va$ eines $N$-Tors.
+
+\section{Leistungswellen}
+Hier wird die Überlagerung einer hin- und rücklaufenden Spannungs- bzw. Stromwelle durch Normierung mit $\sqrt{Z_0}$ mit den Parametern $\underline{a}$ und $\underline{b}$ dargestellt. Die Einheit der Parameter ist $\sqrt{\text{Leistung}}$.
+\begin{equation}
+    \uu = \frac{1}{\sqrt{Z_0}} \left( \UU_h + \UU_r \right) = \frac{\UUh}{\sqrt{Z_0}} e^{-\ugamma z} + \frac{\UUr}{\sqrt{Z_0}} e^{\ugamma z} = \uu_h + \uu_r = \underline{a} + \underline{b}
+\end{equation}
+\begin{equation}
+    \ii = \II \sqrt{Z_0} =  \ii_h - \ii_r = \uu_h + \uu_r = \underline{a} - \underline{b}
+\end{equation}
+\begin{align}
+    \underline{a} &= \frac{1}{2} (\uu + \ii)\\
+    \underline{b} &= \frac{1}{2} (\uu - \ii)
+\end{align}
+
+\subsection{Wirkleistungstransport}
+\todo{Poynting Vektor?}
+Bei monofrequenter Anregung gilt
+\begin{equation}
+    P_w = \frac{1}{2} \left( \abs{a}^2 - \abs{b}^2 \right)
+\end{equation}
+
+\section{Eigenschaften von N-Toren}
+\begin{enumerate}
+    \item Reziprozität:\\
+        Ein N-Tor ist reziprok, wenn Streumatrix symmetrisch: $\us_{ij} = \us_{ji} \;  \forall i\neq j$
+    \item Symmetrie:\\
+        Ein reziprokes N-Tor ist symmetrisch, wenn gilt $\us_{ii} = \us_{jj} \; \forall i,j$
+    \item Verlustlos:\\
+        Ist das N-Tor verlustlos, gilt $\MS \cdot \MS ^{*T} = \overleftrightarrow{1}$
+\end{enumerate}

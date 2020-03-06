@@ -27,6 +27,12 @@ mit
     \ugamma := \sqrt{\left(R'+j\omega L'\right)\left(G'+j\omega C'\right)} = \alpha + j\beta = j\underline{k}_z
     \label{eqn:gamma}
 \end{equation}
+Daraus folgen auch die folgenden Größen:
+\begin{align}
+    \lambda     &= \frac{2\pi}{\beta}\\
+    v_\text{ph} &= \frac{\omega}{\beta}\\
+    v_\text{gr} &= \dpd{\omega}{\beta}
+\end{align}
 
 Die Spannung lässt sich als Überlagerung einer hin- und zurücklaufenden Welle interpretieren:
 \begin{equation}
@@ -92,7 +98,7 @@ Der \emph{Reflexionsfaktor $r$ an Stelle $z$} ist definiert als
 \end{equation}
 Mit \eqref{eqn:u-uberlagerung-z} und $z=-l$ ergibt sich
 \begin{equation}
-    \underline{r}(l) = \frac{\underline{Z}_L-Z_0}{\underline{Z}_L+Z_0} e^{2\ugamma z} = \underline{r}(0) e^{-2\ugamma l}
+    \underline{r}(l) = \underbrace{\frac{\underline{Z}_L-Z_0}{\underline{Z}_L+Z_0}}_{\underline{r}(0)} e^{2\ugamma z} = \underline{r}(0) e^{-2\ugamma l}
 \end{equation}
 Beziehungsweise:
 \begin{equation}

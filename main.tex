@@ -5,20 +5,32 @@
 \usepackage{float}
 \usepackage{commath}
 \usepackage{hyperref}
+\usepackage[textsize=scriptsize]{todonotes}
+\presetkeys{todonotes}{inline}{}
 
 
+
+% Emph bold
 \let\emph\relax % there's no \RedeclareTextFontCommand
 \DeclareTextFontCommand{\emph}{\bfseries}
 
+% Real and Imaginary part
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
 % Underlined U
 \newcommand{\UU}{\ensuremath{\underline{U}}}
+\newcommand{\uu}{\ensuremath{\underline{u}}}
 % Underlined gamma
 \newcommand{\ugamma}{\ensuremath{\underline{\gamma}}}
 % Underlined U_h0
 \newcommand{\UUh}{\ensuremath{\UU_{h0}}}
+% Underlined U_r0
+\newcommand{\UUr}{\ensuremath{\UU_{r0}}}
 
 % Underlined I
 \newcommand{\II}{\ensuremath{\underline{I}}}
+\newcommand{\ii}{\ensuremath{\underline{i}}}
 
 % Underlined Z
 \newcommand{\ZZ}{\ensuremath{\underline{Z}}}
