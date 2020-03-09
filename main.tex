@@ -7,6 +7,7 @@
 \usepackage{hyperref}
 \usepackage[textsize=scriptsize]{todonotes}
 \presetkeys{todonotes}{inline}{}
+\usepackage{siunitx}
 
 
 
@@ -44,6 +45,15 @@
 % Underlined s
 \newcommand{\us}{\ensuremath{\underline{s}}}
 
+% SNR
+\newcommand{\SNR}{\text{SNR}}
+% NF
+\newcommand{\NF}{\text{NF}}
+% ein
+\newcommand{\ein}{\text{ein}}
+% aus
+\newcommand{\aus}{\text{aus}}
+
 
 \title{Einführung in die Hochfrequenz-Übertragungstechnik}
 \author{Jonas Otto}
@@ -55,21 +65,13 @@
 \maketitle
 
 \chapter{Wellen}
-
 \input{leitungen.tex}
-
 \chapter{Smith-Diagramm}
-
 \input{streumatrix.tex}
-
-\chapter{Rauschen}
-
+\input{rauschen.tex}
 \chapter{Komponenten}
-
 \chapter{Übertragungssysteme}
-
 \chapter{Modulation}
-
 \chapter{Wellenausbreitung}
 
 \end{document}

@@ -1,0 +1,87 @@
+\chapter{Rauschen}
+
+\section{Ursachen}
+\begin{description}
+    \item[Thermisches Rauschen] tritt auf, da die Bewegung freier Ladungsträger durch
+        Gitterschwingungen in ihrer Geschwindigkeit fluktuiert.
+    \item[Schrotrauschen] wird durch die Quantisierung von Ladungsträgern verursacht. Auch ist die
+        Generation und Rekombination von Ladungsträgern bei Halbleitern nicht über die Zeit konstant.
+    \item[$1/f$-Rauschen] tritt bei der Emmision von Elektronen aus einer Oberfläche auf, ist aber
+        bei Frequenzen oberhalb \SI{10}{\kilo\hertz} gegenüber den anderen Rauschquellen zu
+        vernachlässigen.
+    \item[Funkelrauschen] wird oft mit dem $1/f$-Rauschen gleichgesetzt.
+\end{description}
+Im Folgenden wird nur thermisches Rauschen angenommen.
+
+\section{Thermisches Rauschen}
+Die \emph{Rauschleistungsdichte $w$} berechnet sich näherungsweise als
+\begin{equation}
+    \boxed{w \approx kT}
+\end{equation}
+mit der \emph{Bolzmann-Konstante $k=k_B$} und der \emph{Temperatur $T$}.
+Unter der Annahme, dass die Rauschleistungsdichte $w$ im Frequenzintervall $B$ konstant ist, gilt
+für die \emph{Rauschleistung $N$}
+\begin{equation}
+    \boxed{N = wB \approx kTB}
+\end{equation}
+
+\subsection{Ersatzrauschquelle}
+
+\subsection{Rauschzahl}
+Die Leistung $P$ eines empfangenen Signals besteht aus Signalleistung $S$ und Rauschleistung $N$.
+Damit lässt sich auch der SNR Wert definieren:
+\begin{gather}
+    P=S+N\\
+    \SNR = \frac{S}{N}
+\end{gather}
+Die \emph{Rauschzahl $F$} wird nun als Verhältnis der Rauschzahlen am Ein- und Ausgang eines Zweitors
+definiert:
+\begin{equation}
+    \boxed{F = \frac{\SNR_\ein}{\SNR_\aus}}
+\end{equation}
+In \si{\decibel} umgerechnet ergibt sich das \emph{Rauschmaß} \NF:
+\begin{equation}
+    \NF = 10\log_{10} F \; \si{\decibel}
+\end{equation}
+Hat das Zweitor einen frequenzunabhängigen \emph{Gewinn $G$}, so nimmt man an dass dieser das
+Eingangssignal verstärkt und danach zusätzliche Rauschleistung $N_\text{zus}$ addiert wird:
+\begin{equation}
+    P_\aus = GP_\ein + N_\text{zus} = \underbrace{GS_\ein}_{S_\aus} + \underbrace{GN_\ein + N_\text{zus}}_{N_\aus}
+\end{equation}
+Für die Rauschzahl in Abhängigkeit von Rauschleistung $N$ und Gewinn $G$ ergibt sich
+\begin{equation}
+    F = 1 + \frac{N_\text{zus}}{N_\ein G}
+\end{equation}
+Da die Rauschzahl von der Eingangsleistung abhängt, wird diese normiert auf die
+\emph{ Standardrauschzahl $F_0$}, bei Temperatur $T_0 = \SI{290}{\kelvin}$ bzw Eingangsrauschleistung
+$N_\ein = kT_0B$:
+\begin{equation}
+    F = 1 + \underbrace{\frac{N_\text{zus}}{kT_0B \cdot G}}_{F_\text{zus}}
+\end{equation}
+Im Folgenden ist mit $F$ die Standardrauschzahl $F_0$ gemeint.
+
+Die zusätzliche Rauschleistung am Ausgang $N_\text{zus}$ lässt sich auch als Rauschleistung am Eingang
+$N_i$ darstellen:
+\begin{equation}
+    N_i = \frac{N_\text{zus}}{G}
+\end{equation}
+Damit wird die äquivalente Rauschtemperatur $T_e$ bestimmt:
+\begin{equation}
+    N_i = kT_eB
+\end{equation}
+Die Rauschzahl abhängig von $N_i$ lautet
+\begin{equation}
+    F = 1 + \frac{N_i}{kT_0B}
+\end{equation}
+Durch Einsetzen der letzten beiden Gleichungen folgt
+\begin{equation}
+    F = 1 + \frac{T_e}{T_0}
+\end{equation}
+
+
+
+
+
+
+
+
