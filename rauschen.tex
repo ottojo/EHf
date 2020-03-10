@@ -56,7 +56,7 @@ Da die Rauschzahl von der Eingangsleistung abhängt, wird diese normiert auf die
 \emph{ Standardrauschzahl $F_0$}, bei Temperatur $T_0 = \SI{290}{\kelvin}$ bzw Eingangsrauschleistung
 $N_\ein = kT_0B$:
 \begin{equation}
-    F = 1 + \underbrace{\frac{N_\text{zus}}{kT_0B \cdot G}}_{F_\text{zus}}
+    F_0 = 1 + \underbrace{\frac{N_\text{zus}}{kT_0B \cdot G}}_{F_\text{zus}}
 \end{equation}
 Im Folgenden ist mit $F$ die Standardrauschzahl $F_0$ gemeint.
 
@@ -78,10 +78,11 @@ Durch Einsetzen der letzten beiden Gleichungen folgt
     F = 1 + \frac{T_e}{T_0}
 \end{equation}
 
-
-
-
-
-
-
-
+\subsection{Kettenrauschzahl}
+\begin{equation}
+    F_\text{Kette} = F_1 + \frac{F_2-1}{G_1} + \frac{F_3-1}{G_1 G_2} + \dots
+\end{equation}
+Diese Rechnung kann auch mit äquivalenten Rauschtemperaturen gemacht werden:
+\begin{equation}
+    T_\aus = \left(T_\ein + T_{e,1} + \frac{T_{e,2}}{G_1} + \frac{T_{e,3}}{G_1 G_2} + \dots \right)G_1G_2G_3\cdots
+\end{equation}
